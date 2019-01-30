@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+Pin.destroy_all
+
+10.times do
+  Commentaire.create(body: Faker::DumbAndDumber.actor) 
+end
+
+10.times do
+Pin.create!(image_pin: Faker::DragonBall.character , body_id) 
+end
+
