@@ -25,6 +25,10 @@ Things you may want to cover:
 
 
 # Marche A suivre 
+
+ ### Tout d'abord on commence avec ::  rails console
+ - et puis on fait entrer ces codes un par un
+
 Cour.new
 cour = Cour.new
 cour.title = "vue js"
@@ -39,10 +43,6 @@ cour2 = Cour.new(title: "vue avec react" , body: "pas mal en tout cas", lecons[l
 cour2 = Cour.new(title: "vue avec react" , body: "pas mal en tout cas", lecons:[l1 , l2])
 cour2
 cour2.lecons
-
- ### Tout d'abord on commence avec ::  rails console
- - et puis on fait entrer ces codes un par un
-
 
 
 
