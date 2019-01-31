@@ -1,3 +1,3 @@
 class Commentaire < ApplicationRecord
-  belongs_to :pins, required: true
+  belongs_to :users
 end

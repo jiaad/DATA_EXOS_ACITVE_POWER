@@ -1,0 +1,18 @@
+2.5.1 :004 > user1 = User.new(name: "jiad")
+ => #<User id: nil, name: "jiad", created_at: nil, updated_at: nil>
+2.5.1 :005 > com1 = Comment.new(comm: "c un comm")
+ => #<Comment id: nil, comm: "c un comm", created_at: nil, updated_at: nil>
+2.5.1 :006 > com_rpl = ReplyComment(reply: "c un reply")
+Traceback (most recent call last):
+        1: from (irb):6
+NoMethodError (undefined method `ReplyComment' for main:Object)
+2.5.1 :007 > com_rpl = ReplyComment.new(reply: "c un reply")
+ => #<ReplyComment id: nil, reply: "c un reply", created_at: nil, updated_at: nil>
+2.5.1 :008 > link1 = Link.new(lien: "c le infamous lien", User:[user1], comments:[com1],replycomments:[com_rpl])
+Traceback (most recent call last):
+        1: from (irb):8
+ActiveModel::UnknownAttributeError (unknown attribute 'User' for Link.)
+2.5.1 :009 > link1 = Link.new(lien: "c le infamous lien", users:[user1], comments:[com1],replycomments:[com_rpl])
+Traceback (most recent call last):
+        1: from (irb):9
+ActiveRecord::HasManyThroughCantAssociateThroughHasOneOrManyReflection (Cannot modify association 'Link#comments' because the source reflection class 'Comment' is associated to 'User' via :has_many.)

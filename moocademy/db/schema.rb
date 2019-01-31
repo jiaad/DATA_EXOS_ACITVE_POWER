@@ -10,22 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_30_225259) do
+ActiveRecord::Schema.define(version: 2019_01_30_231211) do
 
-  create_table "commentaires", force: :cascade do |t|
+  create_table "cours", force: :cascade do |t|
+    t.text "title"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "pins", force: :cascade do |t|
-    t.string "image_pin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
+  create_table "lecons", force: :cascade do |t|
+    t.text "title"
+    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

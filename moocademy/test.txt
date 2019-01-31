@@ -1,0 +1,33 @@
+2.5.1 :001 > Cour.new
+ => #<Cour id: nil, title: nil, body: nil, created_at: nil, updated_at: nil>
+2.5.1 :002 > cour = Cour.new
+ => #<Cour id: nil, title: nil, body: nil, created_at: nil, updated_at: nil>
+2.5.1 :003 > cour.title = "vue js"
+ => "vue js"
+2.5.1 :004 > cour.body = "on va apprendre avec des tutos"
+ => "on va apprendre avec des tutos"
+2.5.1 :005 > cour.body = "on va apprendre avec des tutos"
+ => "on va apprendre avec des tutos"
+2.5.1 :006 > cour
+ => #<Cour id: nil, title: "vue js", body: "on va apprendre avec des tutos", created_at: nil, updated_at: nil>
+2.5.1 :007 > Lecon.new
+ => #<Lecon id: nil, title: nil, body: nil, created_at: nil, updated_at: nil>
+2.5.1 :008 > l1 = Lecon.new(title: "syntaxes" , body: "comment fonctionne")
+ => #<Lecon id: nil, title: "syntaxes", body: "comment fonctionne", created_at: nil, updated_at: nil>
+2.5.1 :009 > l2 = Lecon.new(title: "controlflow" , body: "if et else et elsif")
+ => #<Lecon id: nil, title: "controlflow", body: "if et else et elsif", created_at: nil, updated_at: nil>
+2.5.1 :010 > Cour.new
+ => #<Cour id: nil, title: nil, body: nil, created_at: nil, updated_at: nil>
+2.5.1 :011 > cour2 = Cour.new(title: "vue avec react" , body: "pas mal en tout cas", lecons[l1 , l2])
+Traceback (most recent call last):
+SyntaxError ((irb):11: syntax error, unexpected ')', expecting =>)
+... en tout cas", lecons[l1 , l2])
+...                              ^
+2.5.1 :012 > cour2 = Cour.new(title: "vue avec react" , body: "pas mal en tout cas", lecons:[l1 , l2])
+ => #<Cour id: nil, title: "vue avec react", body: "pas mal en tout cas", created_at: nil, updated_at: nil>
+2.5.1 :013 > cour2
+ => #<Cour id: nil, title: "vue avec react", body: "pas mal en tout cas", created_at: nil, updated_at: nil>
+2.5.1 :014 > cour2.lecons
+ => #<ActiveRecord::Associations::CollectionProxy [#<Lecon id: nil, title: "syntaxes", body: "comment fonctionne", crea
+ted_at: nil, updated_at: nil>, #<Lecon id: nil, title: "controlflow", body: "if et else et elsif", created_at: nil, upd
+ated_at: nil>]>
